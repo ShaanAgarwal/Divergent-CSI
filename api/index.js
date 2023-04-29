@@ -6,12 +6,14 @@ const Post = require('./models/Post');
 const Chat = require('./models/Chat');
 const bcrypt = require('bcryptjs');
 const app = express();
+const apps = express();
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 const nodemailer = require('nodemailer');
+const http = require('http').createServer(apps)
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
@@ -20,8 +22,28 @@ app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
+apps.use(express.static(__dirname + '/public'))
 
 mongoose.connect('mongodb://127.0.0.1:27017/Hackathon');
+
+http.listen(3001, () => {
+    console.log(`Listening on port 3001`)
+});
+
+apps.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+});
+
+// Socket 
+const io = require('socket.io')(http)
+
+io.on('connection', (socket) => {
+    console.log('Connected...')
+    socket.on('message', (msg) => {
+        socket.broadcast.emit('message', msg)
+    })
+
+});
 
 app.post('/register', async (req,res) => {
   const {username, email, age, contact, about, github, linkedin, password} = req.body;
