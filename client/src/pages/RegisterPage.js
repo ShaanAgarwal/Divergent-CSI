@@ -1,3 +1,4 @@
+import './RegistrationPage.css';
 import {useState} from "react";
 
 export default function RegisterPage() {
@@ -29,35 +30,35 @@ export default function RegisterPage() {
       <input type="text"
              placeholder="Username"
              value={username}
-             onChange={ev => setUsername(ev.target.value)}/>
+             onChange={ev => setUsername(ev.target.value)}/><br />
       <input type="email"
              placeholder="Email"
              value={email}
-             onChange={ev => setEmail(ev.target.value)}/>
+             onChange={ev => setEmail(ev.target.value)}/><br />
       <input type="number"
              placeholder="Age"
              value={age}
-             onChange={ev => setAge(ev.target.value)}/>
+             onChange={ev => setAge(ev.target.value)}/><br />
       <input type="number"
              placeholder="Contact Number"
              value={contact} 
-             onChange={ev => setContact(ev.target.value)}/>
+             onChange={ev => setContact(ev.target.value)}/><br />
       <input type="text"
              placeholder="About"
              value={about}
-             onChange={ev => setAbout(ev.target.value)}/>
+             onChange={ev => setAbout(ev.target.value)}/><br />
       <input type="text"
              placeholder="GitHub Link"
              value={github}
-             onChange={ev => setGitHub(ev.target.value)}/>
+             onChange={ev => setGitHub(ev.target.value)}/><br />
       <input type="text"
              placeholder="Linkedin Link"
              value={linkedin}
-             onChange={ev => setLinkedin(ev.target.value)}/>
+             onChange={ev => setLinkedin(ev.target.value)}/><br />
       <input type="password"
              placeholder="Password"
              value={password}
-             onChange={ev => setPassword(ev.target.value)}/>
+             onChange={ev => setPassword(ev.target.value)}/><br />
       <button>Register</button>
     </form>
   );

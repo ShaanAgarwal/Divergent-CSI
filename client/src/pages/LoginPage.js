@@ -1,3 +1,4 @@
+import './loginPage.css'
 import {useContext, useState} from "react";
 import {Navigate} from "react-router-dom";
 import {UserContext} from "../UserContext";
@@ -31,7 +32,7 @@ export default function LoginPage() {
   return (
     <form className="login" onSubmit={login}>
       <h1>Login</h1>
-      <input type="text"
+      <input type="text" className="Username"
              placeholder="username"
              value={username}
              onChange={ev => setUsername(ev.target.value)}/>

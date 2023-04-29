@@ -9,6 +9,7 @@ import {UserContextProvider} from "./UserContext";
 import CreatePost from "./pages/CreatePost";
 import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
+import About from "./pages/AboutPage";
 import DeveloperPage from './pages/DeveloperPage';
 import ChatRoom from './pages/ChatRoom';
 
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<IndexPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/About" element={<About />} />
           <Route path="/developers" element={<Developers />} />
           <Route path="/developers/:id" element={<DeveloperPage />} />
           <Route path="/create" element={<CreatePost />} />
