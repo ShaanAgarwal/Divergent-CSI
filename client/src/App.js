@@ -12,6 +12,8 @@ import EditPost from "./pages/EditPost";
 import About from "./pages/AboutPage";
 import DeveloperPage from './pages/DeveloperPage';
 import ChatRoom from './pages/ChatRoom';
+import HackathonPage from './pages/HackathonPage';
+import TaskManagementPage from './pages/TaskManagementPage';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/chatroom" element={<ChatRoom />} />
           <Route path="/post/:id" element={<PostPage />} />
           <Route path="/edit/:id" element={<EditPost />} />
+          <Route path="/hackathons" element={<HackathonPage />} />
+          <Route path="/taskmanagement" element={<TaskManagementPage />} />
         </Route>
       </Routes>
     </UserContextProvider>

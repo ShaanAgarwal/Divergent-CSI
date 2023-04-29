@@ -1,0 +1,40 @@
+.developer-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+h1 {
+    display: inline-block;
+}
+
+.details {
+    padding-left: 20px;
+}
+
+h1 .username {
+    position: relative;
+    margin-right: 50px;
+}
+
+.developer-page {
+    align-items: center;
+    border-style: solid;
+    border-radius:20px;
+    margin-left: 200px;;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    width:600px;
+}
+
+.attribute{
+    color: red;
+    width: 100px;
+}
+
+.email p {
+    display: inline-block;
+   width:100px;
+}

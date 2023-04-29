@@ -1,3 +1,4 @@
+import './Developer.css'
 import {Link} from "react-router-dom";
 
 export default function Developer({_id,username, email, age, contact, about, github, linkedin, password}) {

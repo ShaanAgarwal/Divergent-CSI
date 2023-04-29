@@ -39,6 +39,7 @@ export default function Header() {
         )}
         {!username && (
           <>
+            <Link to="/hackathons">Hackathons</Link>
             <Link to="/developers">Developers</Link>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>

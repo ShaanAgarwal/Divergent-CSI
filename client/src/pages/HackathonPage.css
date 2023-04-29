@@ -1,0 +1,9 @@
+.hackathon-information {
+    border-style: solid;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+li {
+    list-style: none;
+}
