@@ -1,6 +1,7 @@
 import './DeveloperPage.css'
 import {useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
+import SendMail from './SendMail';
 
 export default function DeveloperPage() {
 
@@ -19,6 +20,7 @@ export default function DeveloperPage() {
   if (!developerInfo) return '';
 
   return (
+    <>
     <div className="developer-page">
       <img className="developer-image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--_HBZhuhF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/nweeqf97l2md3tlqkjyt.jpg" alt=""/>
       <h1 className="username">{developerInfo.username}</h1>
@@ -39,5 +41,9 @@ export default function DeveloperPage() {
       </div>
       </div>
     </div>
+
+    <SendMail />
+
+    </>
   );
 };

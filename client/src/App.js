@@ -14,6 +14,7 @@ import DeveloperPage from './pages/DeveloperPage';
 import ChatRoom from './pages/ChatRoom';
 import HackathonPage from './pages/HackathonPage';
 import TaskManagementPage from './pages/TaskManagementPage';
+import SendMail from './pages/SendMail';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/developers/:id" element={<DeveloperPage />} />
           <Route path="/create" element={<CreatePost />} />
           <Route path="/chatroom" element={<ChatRoom />} />
+          <Route path="/sendmail" element={<SendMail />} />
           <Route path="/post/:id" element={<PostPage />} />
           <Route path="/edit/:id" element={<EditPost />} />
           <Route path="/hackathons" element={<HackathonPage />} />

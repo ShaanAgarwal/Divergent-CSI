@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
+const nodemailer = require('nodemailer');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
@@ -194,6 +195,40 @@ app.get('/chatroom', async (req, res) => {
     console.log(e);
     res.status(400).json(e);
   }
+});
+
+app.post("/send_email", function(req, response){
+  const from = req.body.from;
+  const to = req.body.to;
+  const subject = req.body.subject;
+  const message = req.body.message;
+
+  const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+          user: 'shaanagarwal1942003@gmail.com',
+          pass: 'jqbvmpykybisaijb'
+      }
+  });
+
+  const mailOptions = {
+      from: from,
+      to: to,
+      subject: subject,
+      text: message
+  }
+
+  transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+          console.log(error);
+      } else {
+          console.log("Email Send: " + info.response)
+      }
+      response.redirect("/")
+  })
+
+
+
 });
 
 app.listen(4000);
