@@ -7,3 +7,17 @@
 li {
     list-style: none;
 }
+
+select {
+    height: 30px;
+    border-radius: 30px;
+    background-color: greenyellow;
+}
+
+select:hover {
+    background-color: rgb(238, 238, 114);
+}
+
+.events {
+    border-style: solid;
+}

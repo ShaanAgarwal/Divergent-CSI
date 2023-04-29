@@ -1,0 +1,9 @@
+.image img{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.image {
+    padding: 10px;
+}

@@ -39,7 +39,7 @@ function SendMail() {
       <input type="text" name="subject" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} /><br />
 
       <label htmlFor="message">Message: </label>
-      <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea><br />
+      <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea><br /><br />
 
       <button type="submit">Send</button><br />
     </form>

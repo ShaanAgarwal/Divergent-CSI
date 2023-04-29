@@ -25,7 +25,7 @@ export default function DeveloperPage() {
       <img className="developer-image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--_HBZhuhF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/nweeqf97l2md3tlqkjyt.jpg" alt=""/>
       <h1 className="username">{developerInfo.username}</h1>
       <div className="details">
-      <h2>About</h2>
+      <h2 className='about-label'>About</h2>
       <p>{developerInfo.about}</p>
       <div className="email">
         <h3>Contact Details</h3>
