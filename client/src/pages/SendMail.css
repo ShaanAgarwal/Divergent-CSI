@@ -1,0 +1,13 @@
+.form-container{
+align-items: center;
+    display:inline-block;
+    position: absolute;
+    border-style: solid;
+    border-radius:20px;
+    margin-left: 650px; 
+    margin-top: -500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:300px;
+    height:350px;
+}

@@ -1,8 +1,9 @@
 .developer-image {
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
-    margin-left: 50px;
+    margin-left: 40px;
+    padding-top: 5px;
     display: inline-block;
 }
 
@@ -20,6 +21,7 @@ h1 .username {
 }
 
 .developer-page {
+    display:inline-block;
     align-items: center;
     border-style: solid;
     border-radius:20px;
