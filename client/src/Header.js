@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import {useContext, useEffect} from "react";
-// import {useContext, useEffect, useState} from "react";
 import {UserContext} from "./UserContext";
 
 export default function Header() {
@@ -33,8 +32,10 @@ export default function Header() {
           <>
             <Link to="/create">Create new post</Link>
             <Link to="/developers">Developers</Link>
-            <a href="/" onClick={logout}>Logout ({username})</a>
+            <Link to="/hackathons">Hackathons</Link>
             <Link to="/chatroom">Chat Room</Link>
+            <Link to="/taskmanagement">Tasks</Link>
+            <a href="/" onClick={logout}>Logout ({username})</a>
           </>
         )}
         {!username && (
